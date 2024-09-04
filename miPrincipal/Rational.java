@@ -36,6 +36,11 @@ public class Rational{
     }
     public Rational add(Rational a){
       //coloca aquí el código faltante
+      Rational x= new Rational();
+      x.setNumerador(a.getNumerador()*b.getDenominador()+a.getDenominador()*b.getNumerador());
+      x.setDenominador(a.getDenominador()*b.getDenominador());
+      return x;
+
     }
 
     public Rational mult(Rational a, Rational b){
