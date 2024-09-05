@@ -2,12 +2,23 @@ package miPrincipal;
 
 public class Cuenta_Cheques {
    //coloca el codigo faltante
-    private String nombreCuenta;
-    private String nombreCliente;
-    private String sucursal;
-    private float saldo;
-
-
+   private String nombreCuenta;
+   private String nombreCliente;
+   private String sucursal;
+   private float saldo;
+   public Cuenta_Cheques() {
+   }
+   public Cuenta_Cheques(String nombreCuenta, String nombreCliente, String sucursal, float saldo) {
+      this.nombreCuenta = nombreCuenta;
+      this.nombreCliente = nombreCliente;
+      this.sucursal = sucursal;
+      this.saldo = saldo;
+   }
+   public Cuenta_Cheques(String nombreCuenta, String nombreCliente, String sucursal) {
+      this.nombreCuenta = nombreCuenta;
+      this.nombreCliente = nombreCliente;
+      this.sucursal = sucursal;
+   }
    public String getNombreCuenta() {
       return nombreCuenta;
    }
@@ -26,45 +37,30 @@ public class Cuenta_Cheques {
    public void setSucursal(String sucursal) {
       this.sucursal = sucursal;
    }
+
    public float getSaldo() {
       return saldo;
    }
-   public void setSaldo(float saldo) {
-      this.saldo = saldo;
-   }
-   public Cuenta_Cheques() 
-   {
+
+  
+
+   public float deposito(float cadena){
+      //pendiente
+      return 0.0f;
 
    }
+   public float retiro(float cadena){
+      //pendiente
+      return 0.0f;
 
-   public float getSaldo()
-   {
-      return saldo;
    }
-
-   public float deposito(float cadena)
-{
- //pendiente
- return 0.0f;
-}
-
-public float retiro(float cadena)
-{
-   //pendiente
- return 0.0f;
-}
-public float muestra_saldo()
-{
- //pendiente
- return 0.0f;
-}
+   public float muestra_saldo(){ 
+      //pendiente
+      return 0.0f;
 
 
-   public Cuenta_Cheques(String nombreCuenta, String nombreCliente, String sucursal) {
-      this.nombreCuenta = nombreCuenta;
-      this.nombreCliente = nombreCliente;
-      this.sucursal = sucursal;
-   }
+   }  
+
 
    
 

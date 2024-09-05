@@ -1,5 +1,4 @@
 package miPrincipal;
-
 import java.util.Scanner;
 
 public class AppCuenta_Cheques{
