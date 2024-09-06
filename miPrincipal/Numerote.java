@@ -21,12 +21,21 @@ public class Numerote {
     	// Convertir la cadena a un array de dígitos
     	
         //coloca aqui el código faltante
+		numeros = new int[cadenaValor.length()];
+        for (int i = 0; i < numeros.length; i++) {
+            numeros[i] = cadenaValor.charAt(i) - '0';
+		}
     	
     }
     public Numerote(String n) {
     	// Convertir la cadena a un array de dígitos
         //coloca aqui el código faltante
-    }
+		numeros = new int[n.length()];
+        for (int i = 0; i < numeros.length; i++) 
+		{
+            numeros[i] = n.charAt(i) - '0';
+        }
+	}
     public int getTamanio() {
     	return tamanio;
     }
@@ -70,7 +79,8 @@ public class Numerote {
     public Numerote resta(Numerote b) {
     	
     	 // Crear un array para almacenar el resultado de la resta
-    	 int[] r = new int[Math.max(numeros.length, b.numeros.length)];
+		 int[] r = new int[Math.max(numeros.length, b.numeros.length)];
+
 
     	 // Llevar la cuenta del préstamo
     	 int prestamo = 0;
@@ -79,23 +89,24 @@ public class Numerote {
     	 for (int i = numeros.length - 1, j = b.numeros.length - 1, k = r.length - 1; i >= 0 || j >= 0; i--, j--, k--) {
 
     	     // Restar los dígitos actuales y el préstamo
-    	     int resta = (i >= 0 ? numeros[i] : 0) - (j >= 0 ? b.numeros[j] : 0) - prestamo;
+			 int resta = (i >= 0 ? numeros[i] : 0) - (j >= 0 ? b.numeros[j] : 0) - prestamo;
 
     	     // Si la resta es negativa, tomar prestado 1 del siguiente dígito
-    	     if (resta < 0) {
-    	         resta += 10;
-    	         prestamo = 1;
-    	     } else {
-    	         prestamo = 0;
-    	     }
+			 if (resta < 0) {
+				resta += 10;
+				prestamo = 1;
+			} else {
+				prestamo = 0;
+			}
 
     	     // Almacenar el resultado de la resta en el array
-    	     r[k] = resta;
+			 r[k] = resta;
     	 }
 
     	 // Eliminar los ceros a la izquierda
     	 
-    	r= eliminarCerosIzquierda(r);
+		 r= eliminarCerosIzquierda(r);
+
 
     	 // Crear un nuevo Numerote con el resultado
     	 return new Numerote(r);

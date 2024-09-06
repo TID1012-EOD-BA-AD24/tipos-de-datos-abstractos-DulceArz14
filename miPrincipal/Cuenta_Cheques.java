@@ -46,26 +46,24 @@ public class Cuenta_Cheques {
 
    public float deposito(float cadena){
       //pendiente
-      return 0.0f;
+      if (cadena > 0) {
+         this.saldo += cadena;
+     }
+     return this.saldo;
 
    }
    public float retiro(float cadena){
       //pendiente
-      return 0.0f;
+      if (cadena > 0 && cadena <= this.saldo) {
+         this.saldo -= cadena;
+     }
+     return this.saldo;
 
    }
    public float muestra_saldo(){ 
       //pendiente
-      return 0.0f;
+      return this.saldo;
 
 
    }  
-
-
-   
-
-   
-
-    
-    
 }
